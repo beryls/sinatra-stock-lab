@@ -8,6 +8,8 @@ get '/quote' do
   if @ticker
     @ticker.upcase!
     @result = YahooFinance::get_quotes(YahooFinance::StandardQuote, @ticker)[@ticker].lastTrade
+  else
+    @result = 0
   end
   erb :quote
 end
