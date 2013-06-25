@@ -1,0 +1,8 @@
+<h1>Stock Quote Generator</h1>
+
+<form action ="/quote" method="get">
+  <input type="text" name="ticker">
+  <button>Get Quote</button>
+</form>
+
+<p>The price of <%= @ticker %> is <%= @result %></p>
